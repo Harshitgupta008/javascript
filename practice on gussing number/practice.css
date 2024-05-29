@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f2e9c5;
+    color: white;
+    font-family: sans-serif;
+
+}
+.containar{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card{
+    height: 600px;
+    background-color: rgb(241, 236, 236);
+    border-radius: 30px;
+    padding: 10px;
+    color: #000;
+    position: relative;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    
+}
+.nav2{
+    height: 60px;
+    width: 100%;
+    background-color: #feefef;
+    color: #000;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+   
+}
+
+.justcenter{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.guess2{
+    margin-top: 40px;
+}
+.inputnum{
+    margin-top: 10px;
+    height: 35px;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    padding: 0 8px;
+    outline: none;
+    
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+.submit{
+    height: 40px;
+    width: 160px;
+    background-color: rgb(248, 227, 227);
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    margin: 20px 0;
+    color:rgb(140, 135, 135);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.remain{
+    height: 20px;
+    margin-left: 10px;
+    /* background-color: #df8080; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.remain2{
+    height: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.gameoverbutton{
+    height: 35px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: rgb(96, 94, 94);
+    background-color : rgb(99, 250, 250);
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+   
+}
+.cn3{
+    position: absolute;
+    bottom: 10px;
+    right:30px;
+}
