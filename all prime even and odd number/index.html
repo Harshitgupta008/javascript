@@ -1,95 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div style="margin-bottom: 30px;">
-        <div style="margin-bottom: 15px;">
 
-            <select name="" class="sele">
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="numberType">Select Number Type:</label>
+            <select id="numberType" class="sele">
                 <option value="even">Even</option>
                 <option value="odd">Odd</option>
-                <option value="prime">prime</option>
+                <option value="prime">Prime</option>
+                <option value="fibonacci">Fibonacci</option>
             </select>
         </div>
-        <input type="text"  class="inp">
+        <div class="form-group">
+            <label for="inputNumber">Enter a Number:</label>
+            <input type="number" id="inputNumber" class="inp" placeholder=" Add number">
+        </div>
+        <div class="form-group">
+            <textarea id="outputArea" readonly class="ttarea"></textarea>
+        </div>
+        <button id="generateBtn">Generate</button>
+
     </div>
-    <textarea name="" readonly class="ttarea" style="height: 200px; width: 200px;"></textarea>
-  
-    <script>
-        let inp = document.querySelector('.inp');
-        let tt = document.querySelector('.ttarea');
-        let sele = document.querySelector('.sele');
-    
-        inp.addEventListener('input', updateOutput);
-        sele.addEventListener('input', updateOutput);
-    
-        function updateOutput() {
-            let val;
-            const inputVal = parseInt(inp.value);
-            if (isNaN(inputVal) || inputVal <= 0) {
-                tt.innerHTML = '';
-                return;
-            }
-            
-            if (sele.value === 'even') {
-                val = even(inputVal);
-            } else if (sele.value === 'odd') {
-                val = odd(inputVal);
-            } else if (sele.value === 'fibonacci') {
-                val = fibonacci(inputVal);
-            } else if (sele.value === 'prime') {
-                val = prime(inputVal);
-            }
-    
-            tt.innerHTML = val;
-        }
-    
-        function even(inpval) {
-            let val = '';
-            for (let i = 1; i <= inpval; i++) {
-                if (i % 2 === 0) {
-                    val += i + ", ";
-                }
-            }
-            return val.slice(0, -2); 
-        }
-    
-        function odd(inpval) {
-            let val = '';
-            for (let i = 1; i <= inpval; i++) {
-                if (i % 2 !== 0) {
-                    val += i + ", ";
-                }
-            }
-            return val.slice(0, -2); 
-        }
-    
-       
-    
-        function prime(inpval) {
-            let val = '';
-            let count = 0;
-            let num = 2;
-            while (count < inpval) {
-                if (isPrime(num)) {
-                    val += num + ", ";
-                    count++;
-                }
-                num++;
-            }
-            return val.slice(0, -2);
-        }
-    
-        function isPrime(num) {
-            for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
-                if (num % i === 0) return false;
-            }
-            return num > 1;
-        }
-    </script>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
